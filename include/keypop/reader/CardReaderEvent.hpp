@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
@@ -22,8 +23,8 @@ using keypop::reader::selection::ScheduledCardSelectionsResponse;
 /**
  * Card event data container indicating a change of state.
  *
- * <p>Contains the event origin (reader name), the event type and possibly the card selection
- * response (when available).
+ * <p>Contains the event origin (reader name), the event type and possibly the
+ * card selection response (when available).
  *
  * @since 1.0.0
  */
@@ -81,16 +82,18 @@ public:
     virtual Type getType() const = 0;
 
     /**
-     * Returns the card selection responses when it is available and null in all other cases. It may
-     * be available when the event type is {@link Type#CARD_INSERTED} and always present when the
-     * event type is {@link Type#CARD_MATCHED}.
+     * Returns the card selection responses when it is available and null in all
+     * other cases. It may be available when the event type is {@link
+     * Type#CARD_INSERTED} and always present when the event type is {@link
+     * Type#CARD_MATCHED}.
      *
      * <p>It is necessary to use the method
      * keypop::reader::selection::CardSelectionManager
-     * ::parseScheduledCardSelectionsResponse(ScheduledCardSelectionsResponse) to analyze the
-     * result.
+     * ::parseScheduledCardSelectionsResponse(ScheduledCardSelectionsResponse)
+     * to analyze the result.
      *
-     * @return Null if the event is not carrying a ScheduledCardSelectionsResponse.
+     * @return Null if the event is not carrying a
+     * ScheduledCardSelectionsResponse.
      * @since 1.0.0
      */
     virtual const std::shared_ptr<ScheduledCardSelectionsResponse>

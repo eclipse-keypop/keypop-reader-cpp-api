@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
@@ -28,7 +29,8 @@ public:
      * @since 1.0.0
      */
     explicit CardCommunicationException(const std::string& message)
-    : std::runtime_error(message) {
+    : std::runtime_error(message)
+    {
     }
 
     /**
@@ -38,7 +40,8 @@ public:
      */
     CardCommunicationException(
         const std::string& message, const std::shared_ptr<std::exception> cause)
-    : std::runtime_error(message) {
+    : std::runtime_error(message)
+    {
         // FIXME: should we do something about the cause?
         (void)cause;
     }

@@ -3,7 +3,7 @@
  *
  * @section overview Overview
  *
- * The Keypop Reader C++ API defines interfaces for reader communication aligned with the 
+ * The Keypop Reader C++ API defines interfaces for reader communication aligned with the
  * <a href="https://terminal-api.calypsonet.org/specifications/reader-layer/reader-api/">Terminal Reader specifications</a>
  * from the Calypso Networks Association. This C++ interface provides a port of the
  * reference <a href="https://github.com/eclipse-keypop/keypop-reader-java-api">Keypop Reader Java API</a>.
@@ -11,18 +11,18 @@
  * @section architecture Architecture & Components
  *
  * @subsection basic_reader Basic Reader Operations
- * 
+ *
  * - keypop::reader::CardReader
  *   Core interface for basic card reader operations and state
  *
  * - keypop::reader::ConfigurableCardReader
  *   Extended interface for configurable card readers with protocol management
- * 
+ *
  * @subsection selection_management Card Selection Management
  *
  * - keypop::reader::selection::CardSelectionManager
  *   Service for preparing and executing card selection scenarios
- * 
+ *
  * - keypop::reader::selection::CardSelector
  *   Common card filtering interface for selection process
  *
@@ -63,7 +63,7 @@
  * - keypop::reader::CardCommunicationException
  *   Card communication failure handling
  *
- * - keypop::reader::ReaderCommunicationException  
+ * - keypop::reader::ReaderCommunicationException
  *   Reader communication failure handling
  *
  * - keypop::reader::ReaderProtocolNotSupportedException

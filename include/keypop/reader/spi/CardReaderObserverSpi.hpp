@@ -1,11 +1,12 @@
-/**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
- *                                                                                                *
- * This program and the accompanying materials are made available under the                       *
- * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
- *                                                                                                *
- * SPDX-License-Identifier: MIT                                                                   *
- **************************************************************************************************/
+/******************************************************************************
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
+ *                                                                            *
+ * This program and the accompanying materials are made available under the   *
+ * terms of the MIT License which is available at                             *
+ * https://opensource.org/licenses/MIT.                                       *
+ *                                                                            *
+ * SPDX-License-Identifier: MIT                                               *
+ ******************************************************************************/
 
 #pragma once
 
@@ -31,10 +32,13 @@ public:
      * <p>The event notification should be done <b>sequentially</b> and <b>synchronously</b> but
      * this may depend on the implementation used.
      *
-     * @param readerEvent The not null CardReaderEvent containing the event data.
+     * @param readerEvent The not null CardReaderEvent containing the event
+     * data.
      * @since 1.0.0
      */
-    virtual void onReaderEvent(const std::shared_ptr<CardReaderEvent> readerEvent) = 0;
+    virtual void
+    onReaderEvent(const std::shared_ptr<CardReaderEvent> readerEvent)
+        = 0;
 };
 
 } /* namespace spi */

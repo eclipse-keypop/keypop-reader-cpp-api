@@ -1,5 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * This program and the accompanying materials are made available under the                       *
  * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
@@ -31,7 +31,9 @@ public:
      * @since 1.0.0
      */
     explicit ReaderCommunicationException(const std::string& message)
-    : std::runtime_error(message) {
+    : std::runtime_error(message)
+    , mMessage(message)
+    {
     }
 
     /**
@@ -41,9 +43,26 @@ public:
      */
     ReaderCommunicationException(
         const std::string& message, const std::shared_ptr<std::exception> cause)
-    : std::runtime_error(message) {
+    : std::runtime_error(message)
+    , mMessage(message)
+    {
         (void)cause;
     }
+
+    /**
+     *
+     */
+    const std::string&
+    getMessage() const
+    {
+        return mMessage;
+    }
+
+private:
+    /**
+     *
+     */
+    const std::string mMessage;
 };
 
 } /* namespace reader */

@@ -1,5 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * This program and the accompanying materials are made available under the                       *
  * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
@@ -14,8 +14,8 @@
 
 #include "keypop/reader/CardReader.hpp"
 #include "keypop/reader/ObservableCardReader.hpp"
+#include "keypop/reader/cpp/CardSelectorBase.hpp"
 #include "keypop/reader/selection/CardSelectionResult.hpp"
-#include "keypop/reader/selection/CardSelector.hpp"
 #include "keypop/reader/selection/spi/CardSelectionExtension.hpp"
 
 namespace keypop {
@@ -24,15 +24,14 @@ namespace selection {
 
 using keypop::reader::CardReader;
 using keypop::reader::ObservableCardReader;
-using keypop::reader::selection::CardSelectionResult;
-using keypop::reader::selection::CardSelector;
+using keypop::reader::cpp::CardSelectorBase;
 using keypop::reader::selection::spi::CardSelectionExtension;
 
 /**
  * Service dedicated to card selection, based on the preparation of a card selection scenario.
  *
- * <p>A card selection scenario consists of one or more selection cases based on a {@link
- * CardSelectionExtension}.<br>
+ * <p>A card selection scenario consists of one or more selection cases based on a
+ * CardSelectionExtension.<br>
  * A card selection case targets a specific card. <br>
  * Optionally, additional commands can be defined to be executed after the successful selection of
  * the card. <br>
@@ -46,12 +45,12 @@ using keypop::reader::selection::spi::CardSelectionExtension;
  *   <li>By default, the service stops at the first successful card selection.
  *   <li>If the multiple selection mode is set (disabled by default), the service will execute the
  *       next selection. This multiple selection mode force the execution of all card selection
- *       cases defined in the scenario. This method can be enabled using the {@link
- *       CardSelectionManager#setMultipleSelectionMode()} method
+ *       cases defined in the scenario. This method can be enabled using the
+ *       CardSelectionManager#setMultipleSelectionMode() method
  * </ul>
  *
  * <p>The logical channel established with the card can be left open (default) or closed after card
- * selection (by using the {@link CardSelectionManager#prepareReleaseChannel()} method).
+ * selection (by using the CardSelectionManager#prepareReleaseChannel() method).
  *
  * <p>This service allows to:
  *
@@ -62,8 +61,8 @@ using keypop::reader::selection::spi::CardSelectionExtension;
  *       reader.
  * </ul>
  *
- * An instance of this interface can be obtained via the method {@link
- * ReaderApiFactory#createCardSelectionManager()}.
+ * An instance of this interface can be obtained via the method
+ * ReaderApiFactory#createCardSelectionManager().
  *
  * @since 1.0.0
  */
@@ -100,8 +99,8 @@ public:
      * @since 2.0.0
      */
     virtual int prepareSelection(
-        const std::shared_ptr<CardSelector> cardSelector,
-        const std::shared_ptr<spi::CardSelectionExtension> cardSelectionExtension)
+        const std::shared_ptr<CardSelectorBase> cardSelector,
+        const std::shared_ptr<CardSelectionExtension> cardSelectionExtension)
         = 0;
 
     /**
@@ -190,9 +189,8 @@ public:
      * interpreted.
      * @since 1.0.0
      */
-    virtual std::shared_ptr<calypsonet::reader::selection::CardSelectionResult>
-    parseScheduledCardSelectionsResponse(const std::shared_ptr<ScheduledCardSelectionsResponse>
-                                             scheduledCardSelectionsResponse) const
+    virtual const std::shared_ptr<CardSelectionResult> parseScheduledCardSelectionsResponse(
+        const std::shared_ptr<ScheduledCardSelectionsResponse> scheduledCardSelectionsResponse)
         = 0;
 
     /**
@@ -221,7 +219,7 @@ public:
      * @see importProcessedCardSelectionScenario(const std::string&)
      * @since 1.3.0
      */
-    virtual const std::string& exportProcessedCardSelectionScenario() const = 0;
+    virtual const std::string exportProcessedCardSelectionScenario() const = 0;
 
     /**
      * Imports a previously exported processed card selection scenario in string format and returns
@@ -248,9 +246,8 @@ public:
      * @see exportProcessedCardSelectionScenario()
      * @since 1.3.0
      */
-    virtual const std::shared_ptr<CardSelectionResult>
-    importProcessedCardSelectionScenario(const std::string& processedCardSelectionScenario) const
-        = 0;
+    virtual const std::shared_ptr<CardSelectionResult> importProcessedCardSelectionScenario(
+        const std::string& processedCardSelectionScenario) const = 0;
 };
 
 } /* namespace selection */

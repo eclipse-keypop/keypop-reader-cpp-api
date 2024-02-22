@@ -1,5 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * This program and the accompanying materials are made available under the                       *
  * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
@@ -27,7 +27,8 @@ public:
      * @since 1.0.0
      */
     explicit ReaderProtocolNotSupportedException(const std::string& cardProtocol)
-    : std::runtime_error("The card protocol " + cardProtocol + " is not supported.") {
+    : std::runtime_error("The card protocol " + cardProtocol + " is not supported.")
+    {
     }
 };
 

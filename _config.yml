@@ -1,4 +1,4 @@
 theme: jekyll-theme-minimal
-title: Keypop Terminal Reader C++ API
+title: Keypop Reader C++ API
 include:
   - "_*.html"

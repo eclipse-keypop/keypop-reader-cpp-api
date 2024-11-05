@@ -1,0 +1,4 @@
+theme: jekyll-theme-minimal
+title: Keypop Reader C++ API
+include:
+  - "_*.html"

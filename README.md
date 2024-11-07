@@ -1,15 +1,16 @@
 # Keypop Reader C++ API
 ## Overview
-This repository contains C++ source files that define component interfaces aligned with the **Terminal Reader**
-specifications proposed by the 
-[Calypso Networks Association](https://terminal-api.calypsonet.org/specifications/reader-layer/reader-api/). This C++ 
+This repository contains C++ source files that define component interfaces aligned with the 
+[**Terminal Reader**](https://terminal-api.calypsonet.org/specifications/reader-layer/reader-api/)
+specifications proposed by the [Calypso Networks Association](https://www.calypsonet.org/). This C++ 
 interface is a port of the [Keypop Reader Java API](https://github.com/eclipse/keypop-reader-java-api), which remains 
 the primary reference implementation. The C++ version aims to closely follow and maintain compatibility with the Java 
 version, ensuring consistent functionality and adherence to the established specifications.
 
 The focus of this project is on providing interface definitions necessary for managing readers, reader events, and card
-selection mechanisms. These interfaces act as a foundational layer that can be extended and customized to suit specific
-application needs.
+selection mechanisms. These interfaces serve as a foundational layer that can be extended and customized to suit
+specific application needs, while ensuring consistency across implementations, which is essential for enabling
+certification processes.
 
 While the codebase primarily consists of header files, some `.cpp` files are included for internal consistency testing
 and validation.
@@ -31,8 +32,8 @@ The full documentation, including the **UML diagrams** and **design guide**, is 
 on the [Keypop website](https://keypop.org/apis/reader-layer/reader-api/).
 
 ### Contributing
-Refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute. Please adhere to
-the [Code of Conduct](CODE_OF_CONDUCT.md) when participating in this project.
+Refer to the [contributing guide](https://keypop.org/community/contributing/) file for guidelines on how to contribute.
+Please adhere to the [Code of Conduct](CODE_OF_CONDUCT.md) when participating in this project.
 
 ## License
 This project is licensed under the [MIT License](LICENSE). For more details, please refer to the [LICENSE](LICENSE)

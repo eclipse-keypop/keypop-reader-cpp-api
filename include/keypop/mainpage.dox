@@ -1,0 +1,74 @@
+/**
+ * @mainpage Keypop Reader C++ API Documentation
+ *
+ * @section overview Overview
+ *
+ * The Keypop Reader C++ API defines interfaces for reader communication aligned with the 
+ * <a href="https://terminal-api.calypsonet.org/specifications/reader-layer/reader-api/">Terminal Reader specifications</a>
+ * from the Calypso Networks Association. This C++ interface provides a port of the
+ * reference <a href="https://github.com/eclipse-keypop/keypop-reader-java-api">Keypop Reader Java API</a>.
+ *
+ * @section architecture Architecture & Components
+ *
+ * @subsection basic_reader Basic Reader Operations
+ * 
+ * - keypop::reader::CardReader
+ *   Core interface for basic card reader operations and state
+ *
+ * - keypop::reader::ConfigurableCardReader
+ *   Extended interface for configurable card readers with protocol management
+ * 
+ * @subsection selection_management Card Selection Management
+ *
+ * - keypop::reader::selection::CardSelectionManager
+ *   Service for preparing and executing card selection scenarios
+ * 
+ * - keypop::reader::selection::CardSelector
+ *   Common card filtering interface for selection process
+ *
+ * - keypop::reader::selection::CardSelectionResult
+ *   Container for card selection operation results
+ *
+ * @subsection observation Card Reader Observation
+ *
+ * - keypop::reader::ObservableCardReader
+ *   Interface for observable reader features and card detection
+ *
+ * - keypop::reader::CardReaderEvent
+ *   Card insertion/removal event information
+ *
+ * - keypop::reader::spi::CardReaderObserverSpi
+ *   Interface for card reader event observation
+ *
+ * @subsection iso_support ISO Card Support
+ *
+ * - keypop::reader::selection::IsoCardSelector
+ *   Selection filters for ISO 7816-4 cards
+ *
+ * - keypop::reader::selection::spi::IsoSmartCard
+ *   Interface representing selected ISO 7816-4 cards
+ *
+ * @subsection extensions_support Extension Support
+ *
+ * - keypop::reader::selection::spi::CardSelectionExtension
+ *   SPI for card-specific selection extensions
+ *
+ * - keypop::reader::selection::spi::SmartCard
+ *   Base interface for smart card representation
+ *
+ * @section exceptions Exception Handling
+ *
+ * The API implements the following exception hierarchy:
+ *
+ * - keypop::reader::CardCommunicationException
+ *   Card communication failure handling
+ *
+ * - keypop::reader::ReaderCommunicationException  
+ *   Reader communication failure handling
+ *
+ * - keypop::reader::ReaderProtocolNotSupportedException
+ *   Unsupported protocol error handling
+ *
+ * - keypop::reader::selection::InvalidCardResponseException
+ *   Invalid card response handling during selection
+ */

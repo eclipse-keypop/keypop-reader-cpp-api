@@ -30,7 +30,7 @@ namespace selection {
  * @since 2.0.0
  */
 template <typename T>
-class CardSelector<T> {
+class CardSelector {
 public:
     /**
      * Restricts the selection process to cards communicating with the reader according to a

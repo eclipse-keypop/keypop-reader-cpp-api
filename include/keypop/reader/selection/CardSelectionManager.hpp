@@ -26,6 +26,7 @@ namespace selection {
 using keypop::reader::CardReader;
 using keypop::reader::ObservableCardReader;
 using keypop::reader::cpp::any;
+using keypop::reader::selection::spi::CardSelectionExtension;
 
 /**
  * Service dedicated to card selection, based on the preparation of a card selection scenario.
@@ -100,7 +101,7 @@ public:
      */
     virtual int prepareSelection(
         const std::shared_ptr<CardSelector<any>> cardSelector,
-        const std::shared_ptr<spi::CardSelectionExtension> cardSelectionExtension)
+        const std::shared_ptr<CardSelectionExtension> cardSelectionExtension)
         = 0;
 
     /**
@@ -189,9 +190,9 @@ public:
      * interpreted.
      * @since 1.0.0
      */
-    virtual std::shared_ptr<calypsonet::reader::selection::CardSelectionResult>
-    parseScheduledCardSelectionsResponse(const std::shared_ptr<ScheduledCardSelectionsResponse>
-                                             scheduledCardSelectionsResponse) const
+    virtual std::shared_ptr<CardSelectionResult> parseScheduledCardSelectionsResponse(
+        const std::shared_ptr<ScheduledCardSelectionsResponse> scheduledCardSelectionsResponse)
+        const
         = 0;
 
     /**

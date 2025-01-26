@@ -50,7 +50,7 @@ public:
      * @return Null if there is no active card.
      * @since 1.0.0
      */
-    virtual std::shared_ptrespi::SmartCard::SmartCard > getActiveSmartCard() const = 0;
+    virtual std::shared_ptr<SmartCard> getActiveSmartCard() const = 0;
 
     /**
      * Gets the index of the active selection if any.

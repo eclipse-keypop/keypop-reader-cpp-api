@@ -14,6 +14,7 @@
 
 #include "keypop/reader/CardReader.hpp"
 #include "keypop/reader/ObservableCardReader.hpp"
+#include "keypop/reader/cpp/Any.hpp"
 #include "keypop/reader/selection/CardSelectionResult.hpp"
 #include "keypop/reader/selection/CardSelector.hpp"
 #include "keypop/reader/selection/spi/CardSelectionExtension.hpp"
@@ -24,9 +25,7 @@ namespace selection {
 
 using keypop::reader::CardReader;
 using keypop::reader::ObservableCardReader;
-using keypop::reader::selection::CardSelectionResult;
-using keypop::reader::selection::CardSelector;
-using keypop::reader::selection::spi::CardSelectionExtension;
+using keypop::reader::cpp::any;
 
 /**
  * Service dedicated to card selection, based on the preparation of a card selection scenario.
@@ -100,7 +99,7 @@ public:
      * @since 2.0.0
      */
     virtual int prepareSelection(
-        const std::shared_ptr<CardSelector> cardSelector,
+        const std::shared_ptr<CardSelector<any>> cardSelector,
         const std::shared_ptr<spi::CardSelectionExtension> cardSelectionExtension)
         = 0;
 

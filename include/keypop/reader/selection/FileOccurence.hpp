@@ -49,6 +49,30 @@ enum class FileOccurrence {
     PREVIOUS
 };
 
+static inline std::ostream&
+operator<<(std::ostream& os, const FileOccurrence fo) {
+    os << "FILE_OCCURENCE: ";
+    switch (fo) {
+    case FileOccurrence::FIRST:
+        os << "FIRST";
+        break;
+    case FileOccurrence::LAST:
+        os << "LAST";
+        break;
+    case FileOccurrence::NEXT:
+        os << "NEXT";
+        break;
+    case FileOccurrence::PREVIOUS:
+        os << "PREVIOUS";
+        break;
+    default:
+        os << "UNKNOWN";
+        break;
+    }
+
+    return os;
+}
+
 } /* namespace selection */
 } /* namespace reader */
 } /* namespace keypop */

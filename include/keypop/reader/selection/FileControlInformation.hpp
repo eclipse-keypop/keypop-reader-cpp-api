@@ -49,6 +49,30 @@ enum class FileControlInformation {
     NO_RESPONSE
 };
 
+static inline std::ostream&
+operator<<(std::ostream& os, const FileControlInformation fci) {
+    os << "FILE_CONTROL_INFORMATION: ";
+    switch (fci) {
+    case FileControlInformation::FCI:
+        os << "FCI";
+        break;
+    case FileControlInformation::FCP:
+        os << "FCP";
+        break;
+    case FileControlInformation::FMD:
+        os << "FMD";
+        break;
+    case FileControlInformation::NO_RESPONSE:
+        os << "NO_RESPONSE";
+        break;
+    default:
+        os << "UNKNOWN";
+        break;
+    }
+
+    return os;
+}
+
 } /* namespace selection */
 } /* namespace reader */
 } /* namespace keypop */

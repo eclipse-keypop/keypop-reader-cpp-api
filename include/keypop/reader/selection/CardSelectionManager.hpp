@@ -190,7 +190,7 @@ public:
      * interpreted.
      * @since 1.0.0
      */
-    virtual std::shared_ptr<CardSelectionResult> parseScheduledCardSelectionsResponse(
+    virtual const std::shared_ptr<CardSelectionResult> parseScheduledCardSelectionsResponse(
         const std::shared_ptr<ScheduledCardSelectionsResponse> scheduledCardSelectionsResponse)
         const
         = 0;

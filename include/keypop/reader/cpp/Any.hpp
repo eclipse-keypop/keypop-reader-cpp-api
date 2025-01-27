@@ -12,8 +12,8 @@
  * Distributed under the Boost Software License, Version 1.0. (See accompanying                   *
  * file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)                          *
  **************************************************************************************************/
-#ifndef LINB_ANY_HPP
-#define LINB_ANY_HPP
+#ifndef KEYPOP_ANY_HPP
+#define KEYPOP_ANY_HPP
 #pragma once
 #include <algorithm>
 #include <stdexcept>
@@ -507,10 +507,12 @@ any_cast(any* operand) noexcept {
 } /* namespace keypop */
 
 namespace std {
+
 inline void
 swap(keypop::reader::cpp::any& lhs, keypop::reader::cpp::any& rhs) noexcept {
     lhs.swap(rhs);
 }
-}  // namespace std
+
+} /* namespace std */
 
 #endif

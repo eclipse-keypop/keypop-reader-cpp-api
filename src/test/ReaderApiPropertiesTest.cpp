@@ -8,11 +8,11 @@
  **************************************************************************************************/
 
 #include <regex>
+#include <string>
 
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 
-/* Keypop Reader */
 #include "keypop/reader/ReaderApiProperties.hpp"
 
 using keypop::reader::ReaderApiProperties_VERSION;

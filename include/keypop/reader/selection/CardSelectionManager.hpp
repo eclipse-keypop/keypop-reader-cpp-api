@@ -31,8 +31,8 @@ using keypop::reader::selection::spi::CardSelectionExtension;
 /**
  * Service dedicated to card selection, based on the preparation of a card selection scenario.
  *
- * <p>A card selection scenario consists of one or more selection cases based on a {@link
- * CardSelectionExtension}.<br>
+ * <p>A card selection scenario consists of one or more selection cases based on a
+ * CardSelectionExtension.<br>
  * A card selection case targets a specific card. <br>
  * Optionally, additional commands can be defined to be executed after the successful selection of
  * the card. <br>
@@ -46,12 +46,12 @@ using keypop::reader::selection::spi::CardSelectionExtension;
  *   <li>By default, the service stops at the first successful card selection.
  *   <li>If the multiple selection mode is set (disabled by default), the service will execute the
  *       next selection. This multiple selection mode force the execution of all card selection
- *       cases defined in the scenario. This method can be enabled using the {@link
- *       CardSelectionManager#setMultipleSelectionMode()} method
+ *       cases defined in the scenario. This method can be enabled using the
+ *       CardSelectionManager#setMultipleSelectionMode() method
  * </ul>
  *
  * <p>The logical channel established with the card can be left open (default) or closed after card
- * selection (by using the {@link CardSelectionManager#prepareReleaseChannel()} method).
+ * selection (by using the CardSelectionManager#prepareReleaseChannel() method).
  *
  * <p>This service allows to:
  *
@@ -62,8 +62,8 @@ using keypop::reader::selection::spi::CardSelectionExtension;
  *       reader.
  * </ul>
  *
- * An instance of this interface can be obtained via the method {@link
- * ReaderApiFactory#createCardSelectionManager()}.
+ * An instance of this interface can be obtained via the method
+ * ReaderApiFactory#createCardSelectionManager().
  *
  * @since 1.0.0
  */

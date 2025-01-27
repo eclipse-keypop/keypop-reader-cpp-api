@@ -221,7 +221,7 @@ public:
      * @see importProcessedCardSelectionScenario(const std::string&)
      * @since 1.3.0
      */
-    virtual const std::string& exportProcessedCardSelectionScenario() const = 0;
+    virtual const std::string exportProcessedCardSelectionScenario() const = 0;
 
     /**
      * Imports a previously exported processed card selection scenario in string format and returns

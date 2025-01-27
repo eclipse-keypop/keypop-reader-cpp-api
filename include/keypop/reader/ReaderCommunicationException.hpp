@@ -44,6 +44,14 @@ public:
     : std::runtime_error(message) {
         (void)cause;
     }
+
+    /**
+     *
+     */
+    const std::string&
+    getMessage() const {
+        return this->getMessage();
+    }
 };
 
 } /* namespace reader */

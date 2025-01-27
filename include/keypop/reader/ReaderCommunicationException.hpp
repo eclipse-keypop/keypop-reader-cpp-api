@@ -31,7 +31,8 @@ public:
      * @since 1.0.0
      */
     explicit ReaderCommunicationException(const std::string& message)
-    : std::runtime_error(message) {
+    : std::runtime_error(message)
+    , mMessage(message) {
     }
 
     /**
@@ -41,7 +42,8 @@ public:
      */
     ReaderCommunicationException(
         const std::string& message, const std::shared_ptr<std::exception> cause)
-    : std::runtime_error(message) {
+    : std::runtime_error(message)
+    , mMessage(message) {
         (void)cause;
     }
 
@@ -50,8 +52,14 @@ public:
      */
     const std::string&
     getMessage() const {
-        return this->getMessage();
+        return mMessage;
     }
+
+private:
+    /**
+     *
+     */
+    const std::string mMessage;
 };
 
 } /* namespace reader */

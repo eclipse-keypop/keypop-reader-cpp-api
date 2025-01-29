@@ -192,7 +192,6 @@ public:
      */
     virtual const std::shared_ptr<CardSelectionResult> parseScheduledCardSelectionsResponse(
         const std::shared_ptr<ScheduledCardSelectionsResponse> scheduledCardSelectionsResponse)
-        const
         = 0;
 
     /**

@@ -54,6 +54,11 @@ public:
 
 class any final {
 public:
+    /// Dummy function to make it virtual
+    virtual void
+    dummy() {
+    }
+
     /// Constructs an object of type any with an empty state.
     any()
     : vtable(nullptr) {

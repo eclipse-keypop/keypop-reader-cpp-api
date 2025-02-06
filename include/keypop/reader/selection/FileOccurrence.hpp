@@ -9,6 +9,8 @@
 
 #pragma once
 
+#include <iostream>
+
 namespace keypop {
 namespace reader {
 namespace selection {

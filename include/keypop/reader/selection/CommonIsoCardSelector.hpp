@@ -14,7 +14,7 @@
 
 #include "keypop/reader/selection/CardSelector.hpp"
 #include "keypop/reader/selection/FileControlInformation.hpp"
-#include "keypop/reader/selection/FileOccurence.hpp"
+#include "keypop/reader/selection/FileOccurrence.hpp"
 
 namespace keypop {
 namespace reader {

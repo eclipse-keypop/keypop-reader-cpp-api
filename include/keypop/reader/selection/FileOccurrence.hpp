@@ -52,7 +52,8 @@ enum class FileOccurrence {
 };
 
 static inline std::ostream&
-operator<<(std::ostream& os, const FileOccurrence fo) {
+operator<<(std::ostream& os, const FileOccurrence fo)
+{
     os << "FILE_OCCURENCE: ";
     switch (fo) {
     case FileOccurrence::FIRST:

@@ -52,7 +52,8 @@ enum class FileControlInformation {
 };
 
 static inline std::ostream&
-operator<<(std::ostream& os, const FileControlInformation fci) {
+operator<<(std::ostream& os, const FileControlInformation fci)
+{
     os << "FILE_CONTROL_INFORMATION: ";
     switch (fci) {
     case FileControlInformation::FCI:

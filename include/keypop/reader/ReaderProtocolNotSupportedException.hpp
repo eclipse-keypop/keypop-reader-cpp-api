@@ -27,7 +27,8 @@ public:
      * @since 1.0.0
      */
     explicit ReaderProtocolNotSupportedException(const std::string& cardProtocol)
-    : std::runtime_error("The card protocol " + cardProtocol + " is not supported.") {
+    : std::runtime_error("The card protocol " + cardProtocol + " is not supported.")
+    {
     }
 };
 

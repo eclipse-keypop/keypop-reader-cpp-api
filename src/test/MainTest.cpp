@@ -10,7 +10,8 @@
 #include "gtest/gtest.h"
 
 int
-main(int argc, char** argv) {
+main(int argc, char** argv)
+{
     /* Initialize GTest */
     ::testing::InitGoogleTest(&argc, argv);
 

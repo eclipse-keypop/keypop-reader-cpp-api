@@ -30,7 +30,8 @@ public:
      * @since 1.0.0
      */
     explicit InvalidCardResponseException(const std::string& message)
-    : std::runtime_error(message) {
+    : std::runtime_error(message)
+    {
     }
 
     /**
@@ -40,7 +41,8 @@ public:
      */
     InvalidCardResponseException(
         const std::string& message, const std::shared_ptr<std::exception> cause)
-    : std::runtime_error(message) {
+    : std::runtime_error(message)
+    {
         // FIXME: should we use cause?
         (void)cause;
     }

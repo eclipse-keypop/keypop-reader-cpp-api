@@ -17,7 +17,8 @@
 
 using keypop::reader::ReaderApiProperties_VERSION;
 
-TEST(ReaderApiPropertiesTest, versionIsCorrectlyWritten) {
+TEST(ReaderApiPropertiesTest, versionIsCorrectlyWritten)
+{
     const std::string& apiVersion = ReaderApiProperties_VERSION;
     const std::regex r("\\d+\\.\\d+");
 

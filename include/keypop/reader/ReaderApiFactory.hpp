@@ -31,6 +31,11 @@ using keypop::reader::selection::IsoCardSelector;
 class ReaderApiFactory {
 public:
     /**
+     *
+     */
+    virtual ~ReaderApiFactory() = default;
+
+    /**
      * Returns a new instance of CardSelectionManager.
      *
      * @return A new instance of CardSelectionManager.

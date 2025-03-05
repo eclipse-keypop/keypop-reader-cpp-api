@@ -33,6 +33,11 @@ template <typename T>
 class CardSelector {
 public:
     /**
+     * Virtual destructor.
+     */
+    virtual ~CardSelector() = default;
+
+    /**
      * Restricts the selection process to cards communicating with the reader according to a
      * specific protocol, corresponding to the underlying technology: ISO14443-A, ISO14443-B or any
      * other proprietary or standardized communication technology.

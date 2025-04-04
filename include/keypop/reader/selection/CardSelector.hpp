@@ -1,5 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * This program and the accompanying materials are made available under the                       *
  * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
@@ -11,9 +11,13 @@
 
 #include <string>
 
+#include "keypop/reader/cpp/CardSelectorBase.hpp"
+
 namespace keypop {
 namespace reader {
 namespace selection {
+
+using keypop::reader::cpp::CardSelectorBase;
 
 /**
  * Common filters used to restrict the selection process to certain cards.
@@ -30,8 +34,13 @@ namespace selection {
  * @since 2.0.0
  */
 template <typename T>
-class CardSelector<T> {
+class CardSelector : public CardSelectorBase {
 public:
+    /**
+     * Virtual destructor.
+     */
+    virtual ~CardSelector() = default;
+
     /**
      * Restricts the selection process to cards communicating with the reader according to a
      * specific protocol, corresponding to the underlying technology: ISO14443-A, ISO14443-B or any

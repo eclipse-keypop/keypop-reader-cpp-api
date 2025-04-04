@@ -1,5 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * This program and the accompanying materials are made available under the                       *
  * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
@@ -50,7 +50,7 @@ public:
      * @return Null if there is no active card.
      * @since 1.0.0
      */
-    virtual std::shared_ptrespi::SmartCard::SmartCard > getActiveSmartCard() const = 0;
+    virtual std::shared_ptr<SmartCard> getActiveSmartCard() const = 0;
 
     /**
      * Gets the index of the active selection if any.

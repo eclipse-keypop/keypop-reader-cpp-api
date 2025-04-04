@@ -11,14 +11,23 @@ SET(LIBRARY_NAME keypopreader)
 
 # Declare this library as header only.
 ADD_LIBRARY(
+
     ${LIBRARY_NAME}
+
     INTERFACE
 )
 
 TARGET_INCLUDE_DIRECTORIES(
+
     ${LIBRARY_NAME}
+
     INTERFACE
-    ${CMAKE_CURRENT_SOURCE_DIR}/keypop/reader
+
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-ADD_LIBRARY(Keypop::Reader ALIAS ${LIBRARY_NAME})
+ADD_LIBRARY(
+
+    Keypop::Reader
+    ALIAS
+    ${LIBRARY_NAME})

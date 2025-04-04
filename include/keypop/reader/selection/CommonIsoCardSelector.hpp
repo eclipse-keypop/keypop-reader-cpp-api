@@ -1,5 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
+ * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * This program and the accompanying materials are made available under the                       *
  * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
@@ -9,10 +9,13 @@
 
 #pragma once
 
+#include <cstdint>
 #include <string>
 #include <vector>
 
 #include "keypop/reader/selection/CardSelector.hpp"
+#include "keypop/reader/selection/FileControlInformation.hpp"
+#include "keypop/reader/selection/FileOccurrence.hpp"
 
 namespace keypop {
 namespace reader {
@@ -33,80 +36,8 @@ namespace selection {
  * @since 2.0.0
  */
 template <typename T>
-class CommonIsoCardSelector<T> : public CardSelector<T> {
+class CommonIsoCardSelector : public CardSelector<T> {
 public:
-    /**
-     * Types of templates available in return for the Select Application command, according to the
-     * ISO7816-4 standard.
-     *
-     * @since 2.0.0
-     */
-    enum class FileControlInformation {
-        /**
-         * File control information.
-         *
-         * @since 2.0.0
-         */
-        FCI,
-
-        /**
-         * File control parameters.
-         *
-         * @since 2.0.0
-         */
-        FCP,
-
-        /**
-         * File management data.
-         *
-         * @since 2.0.0
-         */
-        FMD,
-
-        /**
-         * No response expected.
-         *
-         * @since 2.0.0
-         */
-        NO_RESPONSE
-    };
-
-    /**
-     * Navigation options through the different applications contained in the card according to the
-     * ISO7816-4 standard.
-     *
-     * @since 2.0.0
-     */
-    enum class FileOccurrence {
-        /**
-         * First occurrence.
-         *
-         * @since 2.0.0
-         */
-        FIRST,
-
-        /**
-         * Last occurrence.
-         *
-         * @since 2.0.0
-         */
-        LAST,
-
-        /**
-         * Next occurrence.
-         *
-         * @since 2.0.0
-         */
-        NEXT,
-
-        /**
-         * Previous occurrence.
-         *
-         * @since 2.0.0
-         */
-        PREVIOUS
-    };
-
     /**
      * Selects a card application DF by its name.
      *

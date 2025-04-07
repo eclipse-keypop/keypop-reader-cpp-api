@@ -9,45 +9,73 @@
 
 #pragma once
 
-#include <string>
+#include <iostream>
 
 namespace keypop {
 namespace reader {
 namespace selection {
-namespace spi {
 
 /**
- * Basic smart card with which communication has been established after a selection process and
- * which is ready to receive APDUs.
+ * Types of templates available in return for the Select Application command, according to the
+ * ISO7816-4 standard.
  *
- * <p>The power-on data that could be collected by the selection process are made available.
- *
- * <p>Must be implemented and possibly extended by a card extension to meet its specific needs.
- *
- * @since 1.0.0
+ * @since 2.0.0
  */
-class SmartCard {
-public:
+enum class FileControlInformation {
     /**
+     * File control information.
      *
+     * @since 2.0.0
      */
-    virtual ~SmartCard() = default;
+    FCI,
 
     /**
-     * Basic smart card with which communication has been established after a selection process
-     * and which is ready to receive APDUs.
+     * File control parameters.
      *
-     * <p>The power-on data that could be collected by the selection process are made available.
-     *
-     * <p>Must be implemented and possibly extended by a card extension to meet its specific
-     * needs.
-     *
-     * @since 1.0.0
+     * @since 2.0.0
      */
-    virtual const std::string& getPowerOnData() const = 0;
+    FCP,
+
+    /**
+     * File management data.
+     *
+     * @since 2.0.0
+     */
+    FMD,
+
+    /**
+     * No response expected.
+     *
+     * @since 2.0.0
+     */
+    NO_RESPONSE
 };
 
-} /* namespace spi */
+static inline std::ostream&
+operator<<(std::ostream& os, const FileControlInformation fci)
+{
+    os << "FILE_CONTROL_INFORMATION: ";
+    switch (fci) {
+    case FileControlInformation::FCI:
+        os << "FCI";
+        break;
+    case FileControlInformation::FCP:
+        os << "FCP";
+        break;
+    case FileControlInformation::FMD:
+        os << "FMD";
+        break;
+    case FileControlInformation::NO_RESPONSE:
+        os << "NO_RESPONSE";
+        break;
+    default:
+        os << "UNKNOWN";
+        break;
+    }
+
+    return os;
+}
+
 } /* namespace selection */
 } /* namespace reader */
 } /* namespace keypop */

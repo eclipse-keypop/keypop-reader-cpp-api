@@ -79,6 +79,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a31af35cf71a6770db7a31943335975d6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1_reader_api_factory.html#a31af35cf71a6770db7a31943335975d6">~ReaderApiFactory</a> ()=default</td></tr>
+<tr class="separator:a31af35cf71a6770db7a31943335975d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1efa2812c7d04587f1805971c807bd3c"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html">CardSelectionManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1_reader_api_factory.html#a1efa2812c7d04587f1805971c807bd3c">createCardSelectionManager</a> ()=0</td></tr>
 <tr class="separator:a1efa2812c7d04587f1805971c807bd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08d3d42e442bbef80e3aaa013529d530"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_basic_card_selector.html">BasicCardSelector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1_reader_api_factory.html#a08d3d42e442bbef80e3aaa013529d530">createBasicCardSelector</a> ()=0</td></tr>
@@ -90,8 +92,34 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p >Reader API Factory.</p>
 <dl class="section since"><dt>Since</dt><dd>2.0.0 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_reader_api_factory_8hpp_source.html#l00031">31</a> of file <a class="el" href="_reader_api_factory_8hpp_source.html">ReaderApiFactory.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="_reader_api_factory_8hpp_source.html#l00032">32</a> of file <a class="el" href="_reader_api_factory_8hpp_source.html">ReaderApiFactory.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a31af35cf71a6770db7a31943335975d6" name="a31af35cf71a6770db7a31943335975d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31af35cf71a6770db7a31943335975d6">&#9670;&nbsp;</a></span>~ReaderApiFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual keypop::reader::ReaderApiFactory::~ReaderApiFactory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a08d3d42e442bbef80e3aaa013529d530" name="a08d3d42e442bbef80e3aaa013529d530"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a08d3d42e442bbef80e3aaa013529d530">&#9670;&nbsp;</a></span>createBasicCardSelector()</h2>
 
@@ -114,8 +142,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Returns a new instance of <a class="el" href="">BasicCardSelector</a>.</p>
-<dl class="section return"><dt>Returns</dt><dd>A new instance of <a class="el" href="">BasicCardSelector</a>. </dd></dl>
+<p >Returns a new instance of BasicCardSelector.</p>
+<dl class="section return"><dt>Returns</dt><dd>A new instance of BasicCardSelector. </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>2.0.0 </dd></dl>
 
 </div>
@@ -170,8 +198,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Returns a new instance of <a class="el" href="">IsoCardSelector</a>.</p>
-<dl class="section return"><dt>Returns</dt><dd>A new instance of <a class="el" href="">IsoCardSelector</a>. </dd></dl>
+<p >Returns a new instance of IsoCardSelector.</p>
+<dl class="section return"><dt>Returns</dt><dd>A new instance of IsoCardSelector. </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>2.0.0 </dd></dl>
 
 </div>

@@ -11,6 +11,7 @@
 #pragma once
 
 #include <memory>
+#include <ostream>
 #include <string>
 
 #include "keypop/reader/selection/ScheduledCardSelectionsResponse.hpp"
@@ -99,6 +100,36 @@ public:
     virtual const std::shared_ptr<ScheduledCardSelectionsResponse>
     getScheduledCardSelectionsResponse() const = 0;
 };
+
+/**
+ * Operator << for CardReaderEvent::Type enum to enable readable logging.
+ *
+ * @param os The output stream.
+ * @param type The event type.
+ * @return The output stream.
+ */
+inline std::ostream&
+operator<<(std::ostream& os, const CardReaderEvent::Type type)
+{
+    switch (type) {
+    case CardReaderEvent::Type::CARD_INSERTED:
+        os << "CARD_INSERTED";
+        break;
+    case CardReaderEvent::Type::CARD_MATCHED:
+        os << "CARD_MATCHED";
+        break;
+    case CardReaderEvent::Type::CARD_REMOVED:
+        os << "CARD_REMOVED";
+        break;
+    case CardReaderEvent::Type::UNAVAILABLE:
+        os << "UNAVAILABLE";
+        break;
+    default:
+        os << "UNKNOWN_TYPE(" << static_cast<int>(type) << ")";
+        break;
+    }
+    return os;
+}
 
 } /* namespace reader */
 } /* namespace keypop */

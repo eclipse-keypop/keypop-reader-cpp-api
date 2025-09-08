@@ -42,8 +42,7 @@ public:
      * @return Null if no selection application has been performed.
      * @since 1.0.0
      */
-    virtual const std::vector<uint8_t>&
-    getSelectApplicationResponse() const = 0;
+    virtual std::vector<std::uint8_t> getSelectApplicationResponse() const = 0;
 };
 
 } /* namespace spi */

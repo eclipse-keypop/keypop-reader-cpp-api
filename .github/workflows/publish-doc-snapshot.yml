@@ -10,5 +10,5 @@ permissions:
 
 jobs:
   publish-doc-snapshot:
-    uses: eclipse-keypop/keypop-actions/.github/workflows/reusable-publish-doxygen.yml@main
-    secrets: inherit
+    uses: eclipse-keypop/keypop-actions/.github/workflows/reusable-publish-doxygen.yml@main # NOSONAR - Same organization, trusted source
+    secrets: inherit # NOSONAR - Same organization, trusted source

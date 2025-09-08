@@ -37,7 +37,7 @@ jobs:
       - name: Install macOS reqs
         if: ${{ matrix.env.runner == 'macos-latest' }}
         run: |
-          brew install llvm cmake cppcheck clang-format gcc pre-commit
+          brew install llvm cppcheck clang-format gcc pre-commit
 
       - name: Build
         run: |

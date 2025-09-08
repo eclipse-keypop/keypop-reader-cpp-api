@@ -83,8 +83,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5945bb9e06059af90f597120375d8945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98eb472420bedc8b7fb2ce664746aef5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a98eb472420bedc8b7fb2ce664746aef5">setMultipleSelectionMode</a> ()=0</td></tr>
 <tr class="separator:a98eb472420bedc8b7fb2ce664746aef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2055f87a6c39593d76732bbff110584"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#af2055f87a6c39593d76732bbff110584">prepareSelection</a> (const std::shared_ptr&lt; CardSelector &gt; cardSelector, const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1spi_1_1_card_selection_extension.html">spi::CardSelectionExtension</a> &gt; cardSelectionExtension)=0</td></tr>
-<tr class="separator:af2055f87a6c39593d76732bbff110584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cde97dc7c871f099fe8c87c044edb8e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a0cde97dc7c871f099fe8c87c044edb8e">prepareSelection</a> (const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1cpp_1_1_card_selector_base.html">CardSelectorBase</a> &gt; cardSelector, const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1spi_1_1_card_selection_extension.html">CardSelectionExtension</a> &gt; cardSelectionExtension)=0</td></tr>
+<tr class="separator:a0cde97dc7c871f099fe8c87c044edb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a806881bc9a88bdb8633692123bc952ac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a806881bc9a88bdb8633692123bc952ac">prepareReleaseChannel</a> ()=0</td></tr>
 <tr class="separator:a806881bc9a88bdb8633692123bc952ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6a79718c13d05d4ecf5f64f714c06c1"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#ab6a79718c13d05d4ecf5f64f714c06c1">exportCardSelectionScenario</a> () const =0</td></tr>
@@ -95,16 +95,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a982e99b0b7c8f4196b28c26495a7428e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54bbfc2de95763f9fa9e3cfc1cafff0f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a54bbfc2de95763f9fa9e3cfc1cafff0f">scheduleCardSelectionScenario</a> (std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1_observable_card_reader.html">ObservableCardReader</a> &gt; observableCardReader, const <a class="el" href="classkeypop_1_1reader_1_1_observable_card_reader.html#a40b5c32d456c83a71fc406ff8c673f44">ObservableCardReader::NotificationMode</a> notificationMode)=0</td></tr>
 <tr class="separator:a54bbfc2de95763f9fa9e3cfc1cafff0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a665b034e35911199a03b7812093940c2"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; calypsonet::reader::selection::CardSelectionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a665b034e35911199a03b7812093940c2">parseScheduledCardSelectionsResponse</a> (const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_scheduled_card_selections_response.html">ScheduledCardSelectionsResponse</a> &gt; scheduledCardSelectionsResponse) const =0</td></tr>
-<tr class="separator:a665b034e35911199a03b7812093940c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2c1372973ee0d54893a0b456058b4b0"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#aa2c1372973ee0d54893a0b456058b4b0">exportProcessedCardSelectionScenario</a> () const =0</td></tr>
-<tr class="separator:aa2c1372973ee0d54893a0b456058b4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a975e02718a605077397fdaa7e4dd6007"><td class="memItemLeft" align="right" valign="top">virtual const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_result.html">CardSelectionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a975e02718a605077397fdaa7e4dd6007">parseScheduledCardSelectionsResponse</a> (const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_scheduled_card_selections_response.html">ScheduledCardSelectionsResponse</a> &gt; scheduledCardSelectionsResponse)=0</td></tr>
+<tr class="separator:a975e02718a605077397fdaa7e4dd6007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1450486ab80f7e485562cdb0fd235d8"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#ad1450486ab80f7e485562cdb0fd235d8">exportProcessedCardSelectionScenario</a> () const =0</td></tr>
+<tr class="separator:ad1450486ab80f7e485562cdb0fd235d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a506305a79282b6acd7ab529da8ab2dc6"><td class="memItemLeft" align="right" valign="top">virtual const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_result.html">CardSelectionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a506305a79282b6acd7ab529da8ab2dc6">importProcessedCardSelectionScenario</a> (const std::string &amp;processedCardSelectionScenario) const =0</td></tr>
 <tr class="separator:a506305a79282b6acd7ab529da8ab2dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Service dedicated to card selection, based on the preparation of a card selection scenario.</p>
-<p >A card selection scenario consists of one or more selection cases based on a <a class="el" href="">CardSelectionExtension</a>.<br  />
+<p >A card selection scenario consists of one or more selection cases based on a CardSelectionExtension.<br  />
  A card selection case targets a specific card. <br  />
  Optionally, additional commands can be defined to be executed after the successful selection of the card. <br  />
 </p>
@@ -114,9 +114,9 @@ Public Member Functions</h2></td></tr>
 <li>
 By default, the service stops at the first successful card selection. </li>
 <li>
-If the multiple selection mode is set (disabled by default), the service will execute the next selection. This multiple selection mode force the execution of all card selection cases defined in the scenario. This method can be enabled using the <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a98eb472420bedc8b7fb2ce664746aef5">CardSelectionManager#setMultipleSelectionMode()</a> method </li>
+If the multiple selection mode is set (disabled by default), the service will execute the next selection. This multiple selection mode force the execution of all card selection cases defined in the scenario. This method can be enabled using the <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a98eb472420bedc8b7fb2ce664746aef5">CardSelectionManager::setMultipleSelectionMode()</a> method </li>
 </ul>
-<p >The logical channel established with the card can be left open (default) or closed after card selection (by using the <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a806881bc9a88bdb8633692123bc952ac">CardSelectionManager#prepareReleaseChannel()</a> method).</p>
+<p >The logical channel established with the card can be left open (default) or closed after card selection (by using the <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a806881bc9a88bdb8633692123bc952ac">CardSelectionManager::prepareReleaseChannel()</a> method).</p>
 <p >This service allows to:</p>
 <ul>
 <li>
@@ -126,10 +126,10 @@ Make an explicit selection of a card (when the card is already present). </li>
 <li>
 Schedule the execution of the selection as soon as a card is presented to an observable reader. </li>
 </ul>
-<p >An instance of this interface can be obtained via the method <a class="el" href="classkeypop_1_1reader_1_1_reader_api_factory.html#a1efa2812c7d04587f1805971c807bd3c">ReaderApiFactory#createCardSelectionManager()</a>.</p>
+<p >An instance of this interface can be obtained via the method <a class="el" href="classkeypop_1_1reader_1_1_reader_api_factory.html#a1efa2812c7d04587f1805971c807bd3c">ReaderApiFactory::createCardSelectionManager()</a>.</p>
 <dl class="section since"><dt>Since</dt><dd>1.0.0 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_card_selection_manager_8hpp_source.html#l00070">70</a> of file <a class="el" href="_card_selection_manager_8hpp_source.html">CardSelectionManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_card_selection_manager_8hpp_source.html#l00073">73</a> of file <a class="el" href="_card_selection_manager_8hpp_source.html">CardSelectionManager.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5945bb9e06059af90f597120375d8945" name="a5945bb9e06059af90f597120375d8945"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5945bb9e06059af90f597120375d8945">&#9670;&nbsp;</a></span>~CardSelectionManager()</h2>
@@ -188,8 +188,8 @@ Schedule the execution of the selection as soon as a card is presented to an obs
 
 </div>
 </div>
-<a id="aa2c1372973ee0d54893a0b456058b4b0" name="aa2c1372973ee0d54893a0b456058b4b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2c1372973ee0d54893a0b456058b4b0">&#9670;&nbsp;</a></span>exportProcessedCardSelectionScenario()</h2>
+<a id="ad1450486ab80f7e485562cdb0fd235d8" name="ad1450486ab80f7e485562cdb0fd235d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1450486ab80f7e485562cdb0fd235d8">&#9670;&nbsp;</a></span>exportProcessedCardSelectionScenario()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +198,7 @@ Schedule the execution of the selection as soon as a card is presented to an obs
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const std::string &amp; keypop::reader::selection::CardSelectionManager::exportProcessedCardSelectionScenario </td>
+          <td class="memname">virtual const std::string keypop::reader::selection::CardSelectionManager::exportProcessedCardSelectionScenario </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -212,8 +212,8 @@ Schedule the execution of the selection as soon as a card is presented to an obs
 </div><div class="memdoc">
 <p >Exports the content of the previously processed card selection scenario in string format.</p>
 <p >This string can be imported into the same or another card selection manager via the method importProcessedCardSelectionScenario(const std::string&amp;).</p>
-<p >Prerequisite: the card selection scenario must first have been processed via the <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a982e99b0b7c8f4196b28c26495a7428e">processCardSelectionScenario(const std::shared_ptr&lt;CardReader&gt;)</a> or parseScheduledCardSelectionsResponse(const std::shared_ptr&lt;ScheduledCardSelectionsResponse&gt;) method.</p>
-<p >Caution: if the local environment does not have the card extensions involved in the selection scenario, then methods processCardSelectionScenario(const std::shared_ptr&lt;CardReader&gt;) and parseScheduledCardSelectionsResponse(const std::shared_ptr&lt;ScheduledCardSelectionsResponse&gt;) will not be able to interpret the content of the result, and consequently, the content of the result object <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_result.html">CardSelectionResult</a> will not contain any active selection. It will then be necessary to export the processed scenario in order to import it and interpret it correctly by a card selection manager that has all the card extensions involved in the selection scenario.</p>
+<p >Prerequisite: the card selection scenario must first have been processed via the processCardSelectionScenario(const std::shared_ptr&lt;CardReader&gt;) or parseScheduledCardSelectionsResponse(const std::shared_ptr&lt;ScheduledCardSelectionsResponse&gt;) method.</p>
+<p >Caution: if the local environment does not have the card extensions involved in the selection scenario, then methods <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#a982e99b0b7c8f4196b28c26495a7428e">processCardSelectionScenario(const std::shared_ptr&lt;CardReader&gt;)</a> and parseScheduledCardSelectionsResponse(const std::shared_ptr&lt;ScheduledCardSelectionsResponse&gt;) will not be able to interpret the content of the result, and consequently, the content of the result object <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_result.html">CardSelectionResult</a> will not contain any active selection. It will then be necessary to export the processed scenario in order to import it and interpret it correctly by a card selection manager that has all the card extensions involved in the selection scenario.</p>
 <dl class="section return"><dt>Returns</dt><dd>A non-null string. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
@@ -296,7 +296,7 @@ Schedule the execution of the selection as soon as a card is presented to an obs
 <p >Prerequisites:</p>
 <ul>
 <li>
-the string must have been exported from a card selection manager via the method <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#aa2c1372973ee0d54893a0b456058b4b0">exportProcessedCardSelectionScenario()</a>, </li>
+the string must have been exported from a card selection manager via the method <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#ad1450486ab80f7e485562cdb0fd235d8">exportProcessedCardSelectionScenario()</a>, </li>
 <li>
 the local environment must have the card extensions involved in the card selection scenario, </li>
 <li>
@@ -316,13 +316,13 @@ the current manager must first be configured with the same card selection scenar
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#aa2c1372973ee0d54893a0b456058b4b0">exportProcessedCardSelectionScenario()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_manager.html#ad1450486ab80f7e485562cdb0fd235d8">exportProcessedCardSelectionScenario()</a> </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.3.0 </dd></dl>
 
 </div>
 </div>
-<a id="a665b034e35911199a03b7812093940c2" name="a665b034e35911199a03b7812093940c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a665b034e35911199a03b7812093940c2">&#9670;&nbsp;</a></span>parseScheduledCardSelectionsResponse()</h2>
+<a id="a975e02718a605077397fdaa7e4dd6007" name="a975e02718a605077397fdaa7e4dd6007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a975e02718a605077397fdaa7e4dd6007">&#9670;&nbsp;</a></span>parseScheduledCardSelectionsResponse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,11 +331,11 @@ the current manager must first be configured with the same card selection scenar
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::shared_ptr&lt; calypsonet::reader::selection::CardSelectionResult &gt; keypop::reader::selection::CardSelectionManager::parseScheduledCardSelectionsResponse </td>
+          <td class="memname">virtual const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_card_selection_result.html">CardSelectionResult</a> &gt; keypop::reader::selection::CardSelectionManager::parseScheduledCardSelectionsResponse </td>
           <td>(</td>
           <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1_scheduled_card_selections_response.html">ScheduledCardSelectionsResponse</a> &gt;&#160;</td>
           <td class="paramname"><em>scheduledCardSelectionsResponse</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -391,8 +391,8 @@ the current manager must first be configured with the same card selection scenar
 
 </div>
 </div>
-<a id="af2055f87a6c39593d76732bbff110584" name="af2055f87a6c39593d76732bbff110584"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2055f87a6c39593d76732bbff110584">&#9670;&nbsp;</a></span>prepareSelection()</h2>
+<a id="a0cde97dc7c871f099fe8c87c044edb8e" name="a0cde97dc7c871f099fe8c87c044edb8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cde97dc7c871f099fe8c87c044edb8e">&#9670;&nbsp;</a></span>prepareSelection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -403,13 +403,13 @@ the current manager must first be configured with the same card selection scenar
         <tr>
           <td class="memname">virtual int keypop::reader::selection::CardSelectionManager::prepareSelection </td>
           <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; CardSelector &gt;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1cpp_1_1_card_selector_base.html">CardSelectorBase</a> &gt;&#160;</td>
           <td class="paramname"><em>cardSelector</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1spi_1_1_card_selection_extension.html">spi::CardSelectionExtension</a> &gt;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classkeypop_1_1reader_1_1selection_1_1spi_1_1_card_selection_extension.html">CardSelectionExtension</a> &gt;&#160;</td>
           <td class="paramname"><em>cardSelectionExtension</em>&#160;</td>
         </tr>
         <tr>

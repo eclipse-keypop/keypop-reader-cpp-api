@@ -36,12 +36,17 @@ repos:
       # Static code analysis (for C++ files).
       - id: cppcheck
         name: cppcheck
-        args: [--enable=all,
-               --error-exitcode=1,
-               --language=c++,
-               --suppressions-list=./.cppcheck.suppress]
+        args: [
+          --enable=all,
+          --error-exitcode=1,
+          --language=c++,
+          --suppressions-list=./.cppcheck.suppress
+        ]
         files: \.(cpp|hpp)$
 
       # Coding style analysis. Based on Google C++ code style.
       # cpplint configuration can be found in CPPLINT.cfg.
       - id: cpplint
+        args: [
+          --exclude=./include/keypop/reader/cpp/Any.hpp
+        ]

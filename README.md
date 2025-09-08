@@ -1,10 +1,10 @@
 # Keypop Reader C++ API
 ## Overview
-This repository contains C++ source files that define component interfaces aligned with the 
+This repository contains C++ source files that define component interfaces aligned with the
 [**Terminal Reader**](https://terminal-api.calypsonet.org/specifications/reader-layer/reader-api/)
-specifications proposed by the [Calypso Networks Association](https://www.calypsonet.org/). This C++ 
-interface is a port of the [Keypop Reader Java API](https://github.com/eclipse-keypop/keypop-reader-java-api), which remains 
-the primary reference implementation. The C++ version aims to closely follow and maintain compatibility with the Java 
+specifications proposed by the [Calypso Networks Association](https://www.calypsonet.org/). This C++
+interface is a port of the [Keypop Reader Java API](https://github.com/eclipse-keypop/keypop-reader-java-api), which remains
+the primary reference implementation. The C++ version aims to closely follow and maintain compatibility with the Java
 version, ensuring consistent functionality and adherence to the established specifications.
 
 The focus of this project is on providing interface definitions necessary for managing readers, reader events, and card

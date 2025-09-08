@@ -10,48 +10,73 @@
 
 #pragma once
 
-#include <string>
+#include <iostream>
 
 namespace keypop {
 namespace reader {
 namespace selection {
-namespace spi {
 
 /**
- * Basic smart card with which communication has been established after a
- * selection process and which is ready to receive APDUs.
+ * Navigation options through the different applications contained in the card
+ * according to the ISO7816-4 standard.
  *
- * <p>The power-on data that could be collected by the selection process are
- * made available.
- *
- * <p>Must be implemented and possibly extended by a card extension to meet its
- * specific needs.
- *
- * @since 1.0.0
+ * @since 2.0.0
  */
-class SmartCard {
-public:
+enum class FileOccurrence {
     /**
+     * First occurrence.
      *
+     * @since 2.0.0
      */
-    virtual ~SmartCard() = default;
+    FIRST,
 
     /**
-     * Basic smart card with which communication has been established after a
-     * selection process and which is ready to receive APDUs.
+     * Last occurrence.
      *
-     * <p>The power-on data that could be collected by the selection process are
-     * made available.
-     *
-     * <p>Must be implemented and possibly extended by a card extension to meet
-     * its specific needs.
-     *
-     * @since 1.0.0
+     * @since 2.0.0
      */
-    virtual const std::string& getPowerOnData() const = 0;
+    LAST,
+
+    /**
+     * Next occurrence.
+     *
+     * @since 2.0.0
+     */
+    NEXT,
+
+    /**
+     * Previous occurrence.
+     *
+     * @since 2.0.0
+     */
+    PREVIOUS
 };
 
-} /* namespace spi */
+static inline std::ostream&
+operator<<(std::ostream& os, const FileOccurrence fo)
+{
+    os << "FILE_OCCURENCE: ";
+    switch (fo) {
+    case FileOccurrence::FIRST:
+        os << "FIRST";
+        break;
+    case FileOccurrence::LAST:
+        os << "LAST";
+        break;
+    case FileOccurrence::NEXT:
+        os << "NEXT";
+        break;
+    case FileOccurrence::PREVIOUS:
+        os << "PREVIOUS";
+        break;
+    default:
+        os << "UNKNOWN";
+        break;
+    }
+
+    return os;
+}
+
 } /* namespace selection */
 } /* namespace reader */
 } /* namespace keypop */

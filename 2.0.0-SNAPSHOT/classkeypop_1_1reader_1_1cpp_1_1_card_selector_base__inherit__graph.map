@@ -1,0 +1,9 @@
+<map id="keypop::reader::cpp::CardSelectorBase" name="keypop::reader::cpp::CardSelectorBase">
+<area shape="rect" id="node1" title=" " alt="" coords="5,45,139,87"/>
+<area shape="rect" id="node2" href="$classkeypop_1_1reader_1_1selection_1_1_card_selector.html" title=" " alt="" coords="187,9,420,51"/>
+<area shape="rect" id="node4" href="$classkeypop_1_1reader_1_1selection_1_1_card_selector.html" title=" " alt="" coords="222,77,385,119"/>
+<area shape="rect" id="node3" href="$classkeypop_1_1reader_1_1selection_1_1_basic_card_selector.html" title=" " alt="" coords="488,5,651,47"/>
+<area shape="rect" id="node5" href="$classkeypop_1_1reader_1_1selection_1_1_common_iso_card_selector.html" title=" " alt="" coords="483,70,656,126"/>
+<area shape="rect" id="node7" href="$classkeypop_1_1reader_1_1selection_1_1_common_iso_card_selector.html" title=" " alt="" coords="468,149,671,191"/>
+<area shape="rect" id="node6" href="$classkeypop_1_1reader_1_1selection_1_1_iso_card_selector.html" title=" " alt="" coords="719,77,881,119"/>
+</map>

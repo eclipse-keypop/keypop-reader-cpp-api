@@ -8,6 +8,9 @@ on:
         description: 'Version tag (ex: 1.0.0)'
         required: true
 
+permissions:
+  checks: write
+
 jobs:
   publish-doc-release:
     uses: eclipse-keypop/keypop-actions/.github/workflows/reusable-publish-doxygen.yml@main

@@ -5,6 +5,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  checks: write
+
 jobs:
   publish-doc-snapshot:
     uses: eclipse-keypop/keypop-actions/.github/workflows/reusable-publish-doxygen.yml@main

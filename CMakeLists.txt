@@ -11,7 +11,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 
 PROJECT(KeypopReaderCppApi
-        VERSION 2.0.1
+        VERSION 2.1.0
         LANGUAGES C CXX)
 
 SET(PACKAGE_NAME "keypop-reader-cpp-api")

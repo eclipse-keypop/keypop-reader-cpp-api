@@ -1,9 +1,12 @@
 /******************************************************************************
  * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
  *                                                                            *
+ * See the NOTICE file(s) distributed with this work for additional           *
+ * information regarding copyright ownership.                                 *
+ *                                                                            *
  * This program and the accompanying materials are made available under the   *
  * terms of the MIT License which is available at                             *
- * https://opensource.org/licenses/MIT.                                       *
+ * https://opensource.org/licenses/MIT                                        *
  *                                                                            *
  * SPDX-License-Identifier: MIT                                               *
  ******************************************************************************/
@@ -148,8 +151,7 @@ public:
      * @since 1.1.0
      */
     virtual int
-    importCardSelectionScenario(const std::string& cardSelectionScenario)
-        = 0;
+    importCardSelectionScenario(const std::string& cardSelectionScenario) = 0;
 
     /**
      * Explicitely executes a previously prepared card selection scenario and
@@ -189,8 +191,7 @@ public:
      */
     virtual void scheduleCardSelectionScenario(
         std::shared_ptr<ObservableCardReader> observableCardReader,
-        const ObservableCardReader::NotificationMode notificationMode)
-        = 0;
+        const ObservableCardReader::NotificationMode notificationMode) = 0;
 
     /**
      * Analyzes the responses provided by a
@@ -209,8 +210,7 @@ public:
     virtual const std::shared_ptr<CardSelectionResult>
     parseScheduledCardSelectionsResponse(
         const std::shared_ptr<ScheduledCardSelectionsResponse>
-            scheduledCardSelectionsResponse)
-        = 0;
+            scheduledCardSelectionsResponse) = 0;
 
     /**
      * Exports the content of the previously processed card selection scenario

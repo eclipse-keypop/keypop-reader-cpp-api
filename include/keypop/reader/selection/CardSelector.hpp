@@ -50,9 +50,10 @@ public:
      *
      * <p>The protocol is identified by its <b>logical name</b>.
      *
-     * <p><b>Prerequisites</b>: the reader must be of type keypop::reader::ConfigurableCardReader
-     * and the targeted card protocol(s) must be activated via the
-     * keypop::reader::ConfigurableCardReader#activateProtocol(const
+     * <p><b>Prerequisites</b>: the reader must be of type
+     * keypop::reader::ConfigurableCardReader and the targeted card protocol(s)
+     * must be activated via the keypop::reader
+     * ::ConfigurableCardReader#activateProtocol(const
      * std::string&, const std::string&) method and associated with the logical
      * name used as a filter.
      *

@@ -1,9 +1,12 @@
 /******************************************************************************
  * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
  *                                                                            *
+ * See the NOTICE file(s) distributed with this work for additional           *
+ * information regarding copyright ownership.                                 *
+ *                                                                            *
  * This program and the accompanying materials are made available under the   *
  * terms of the MIT License which is available at                             *
- * https://opensource.org/licenses/MIT.                                       *
+ * https://opensource.org/licenses/MIT                                        *
  *                                                                            *
  * SPDX-License-Identifier: MIT                                               *
  ******************************************************************************/
@@ -76,7 +79,8 @@ public:
     /**
      * Sets the exception handler.
      *
-     * <p>The invocation of this method is <b>mandatory</b> when the reader has to be observed.
+     * <p>The invocation of this method is <b>mandatory</b> when the reader has
+     * to be observed.
      *
      * <p>In case of a fatal error during the observation, the handler will
      * receive a notification.
@@ -88,8 +92,7 @@ public:
      */
     virtual void setReaderObservationExceptionHandler(
         std::shared_ptr<CardReaderObservationExceptionHandlerSpi>
-            exceptionHandler)
-        = 0;
+            exceptionHandler) = 0;
 
     /**
      * Registers a new observer to be notified when a reader event occurs.
@@ -117,8 +120,7 @@ public:
      * @since 1.0.0
      */
     virtual void
-    removeObserver(const std::shared_ptr<CardReaderObserverSpi> observer)
-        = 0;
+    removeObserver(const std::shared_ptr<CardReaderObserverSpi> observer) = 0;
 
     /**
      * Unregisters all observers at once.
@@ -163,8 +165,8 @@ public:
      * <p>This method has no effect if the physical communication channel has
      * already been closed.
      *
-     * <p>It is <b>mandatory</b> to invoke this method when the physical communication channel with
-     * the card could not be closed properly.<br>
+     * <p>It is <b>mandatory</b> to invoke this method when the physical
+     * communication channel with the card could not be closed properly.<br>
      * The channel closing is nominally managed during the last transmission
      * with the card. However, there are cases where exchanges with the card are
      * interrupted (e.g. by an exception), in which case it is necessary to

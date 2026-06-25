@@ -1,9 +1,12 @@
 /******************************************************************************
  * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
  *                                                                            *
+ * See the NOTICE file(s) distributed with this work for additional           *
+ * information regarding copyright ownership.                                 *
+ *                                                                            *
  * This program and the accompanying materials are made available under the   *
  * terms of the MIT License which is available at                             *
- * https://opensource.org/licenses/MIT.                                       *
+ * https://opensource.org/licenses/MIT                                        *
  *                                                                            *
  * SPDX-License-Identifier: MIT                                               *
  ******************************************************************************/
@@ -27,8 +30,8 @@ namespace selection {
  * <p>Conversely, if one or more filters have been defined, the card will not be
  * selected if one of them rejects the card.
  *
- * <p>An instance of this interface can be obtained via the method {@link
- * ReaderApiFactory#createBasicCardSelector()}.
+ * <p>An instance of this interface can be obtained via the method
+ * ReaderApiFactory#createBasicCardSelector().
  *
  * @since 2.0.0
  */

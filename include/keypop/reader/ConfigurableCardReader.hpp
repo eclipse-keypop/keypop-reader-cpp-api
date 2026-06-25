@@ -1,9 +1,12 @@
 /******************************************************************************
  * Copyright (c) 2025 Calypso Networks Association https://calypsonet.org/    *
  *                                                                            *
+ * See the NOTICE file(s) distributed with this work for additional           *
+ * information regarding copyright ownership.                                 *
+ *                                                                            *
  * This program and the accompanying materials are made available under the   *
  * terms of the MIT License which is available at                             *
- * https://opensource.org/licenses/MIT.                                       *
+ * https://opensource.org/licenses/MIT                                        *
  *                                                                            *
  * SPDX-License-Identifier: MIT                                               *
  ******************************************************************************/
@@ -44,7 +47,8 @@ public:
      * reader and the communication protocol name defined by the application is
      * intended to manage non-ISO cards. It allows a unique protocol name to be
      * set when constructing a card selector as defined by
-     * the <b>Keypop Card API</b> regardless of the type of reader that will be used.
+     * the <b>Keypop Card API</b> regardless of the type of reader that will be
+     * used.
      *
      * @param physicalProtocolName The name of the physical communication
      * protocol as known by the reader. See the reader documentation for the
@@ -61,8 +65,7 @@ public:
      */
     virtual void activateProtocol(
         const std::string& physicalProtocolName,
-        const std::string& logicalProtocolName)
-        = 0;
+        const std::string& logicalProtocolName) = 0;
 
     /**
      * Deactivates the provided reader communication protocol. Inhibits the

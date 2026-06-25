@@ -29,7 +29,7 @@ implementations of the defined interfaces as needed.
 
 ## Documentation & Contribution Guide
 The full documentation, including the **UML diagrams** and **design guide**, is available
-on the [Keypop website](https://keypop.org/apis/reader-layer/reader-api/).
+on the Keypop website [keypop.org](https://keypop.org/).
 
 ### Contributing
 Refer to the [contributing guide](https://keypop.org/community/contributing/) file for guidelines on how to contribute.

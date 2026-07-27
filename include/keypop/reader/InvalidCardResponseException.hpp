@@ -13,73 +13,40 @@
 
 #pragma once
 
-#include <iostream>
+#include <stdexcept>
+#include <string>
 
 namespace keypop {
 namespace reader {
-namespace selection {
 
 /**
- * Navigation options through the different applications contained in the card
- * according to the ISO7816-4 standard.
+ * Indicates that a response received from the card during the command
+ * processing was invalid.
  *
- * @since 2.0.0
+ * @since 2.1.0
  */
-enum class FileOccurrence {
+class InvalidCardResponseException : public std::runtime_error {
+public:
     /**
-     * First occurrence.
-     *
-     * @since 2.0.0
+     * @param message The message to identify the exception context.
+     * @since 2.1.0
      */
-    FIRST,
-
-    /**
-     * Last occurrence.
-     *
-     * @since 2.0.0
-     */
-    LAST,
-
-    /**
-     * Next occurrence.
-     *
-     * @since 2.0.0
-     */
-    NEXT,
-
-    /**
-     * Previous occurrence.
-     *
-     * @since 2.0.0
-     */
-    PREVIOUS
-};
-
-static inline std::ostream&
-operator<<(std::ostream& os, const FileOccurrence fo)
-{
-    os << "FILE_OCCURENCE: ";
-    switch (fo) {
-    case FileOccurrence::FIRST:
-        os << "FIRST";
-        break;
-    case FileOccurrence::LAST:
-        os << "LAST";
-        break;
-    case FileOccurrence::NEXT:
-        os << "NEXT";
-        break;
-    case FileOccurrence::PREVIOUS:
-        os << "PREVIOUS";
-        break;
-    default:
-        os << "UNKNOWN";
-        break;
+    explicit InvalidCardResponseException(const std::string& message)
+    : std::runtime_error(message)
+    {
     }
 
-    return os;
-}
+    /**
+     * @param message The message to identify the exception context.
+     * @param cause The cause.
+     * @since 2.1.0
+     */
+    InvalidCardResponseException(
+        const std::string& message, const std::exception& /*cause*/)
+    : std::runtime_error(message)
+    {
+    }
+};
 
-} /* namespace selection */
 } /* namespace reader */
 } /* namespace keypop */

@@ -13,73 +13,55 @@
 
 #pragma once
 
-#include <iostream>
+#include <stdexcept>
 
 namespace keypop {
 namespace reader {
-namespace selection {
 
 /**
- * Navigation options through the different applications contained in the card
- * according to the ISO7816-4 standard.
+ * Policy for managing the physical channel after a card request is executed.
  *
- * @since 2.0.0
+ * @since 2.1.0
  */
-enum class FileOccurrence {
+enum class ChannelControl {
     /**
-     * First occurrence.
+     * Leaves the physical channel open.
      *
-     * @since 2.0.0
+     * @since 2.1.0
      */
-    FIRST,
+    KEEP_OPEN,
 
     /**
-     * Last occurrence.
+     * Terminates communication with the card.<br>
+     * The physical channel closes instantly or a card removal sequence is
+     * initiated depending on the observation mode.
      *
-     * @since 2.0.0
+     * @since 2.1.0
      */
-    LAST,
-
-    /**
-     * Next occurrence.
-     *
-     * @since 2.0.0
-     */
-    NEXT,
-
-    /**
-     * Previous occurrence.
-     *
-     * @since 2.0.0
-     */
-    PREVIOUS
+    CLOSE_AFTER
 };
 
-static inline std::ostream&
-operator<<(std::ostream& os, const FileOccurrence fo)
+/**
+ * Returns the enum constant of this type with the specified value.
+ *
+ * @param value The value of the enum constant to be returned.
+ * @return The enum constant with the specified value.
+ * @throw std::invalid_argument If this enum has no constant with the specified
+ * value.
+ * @since 2.1.0
+ */
+inline ChannelControl
+valueOf(const int value)
 {
-    os << "FILE_OCCURENCE: ";
-    switch (fo) {
-    case FileOccurrence::FIRST:
-        os << "FIRST";
-        break;
-    case FileOccurrence::LAST:
-        os << "LAST";
-        break;
-    case FileOccurrence::NEXT:
-        os << "NEXT";
-        break;
-    case FileOccurrence::PREVIOUS:
-        os << "PREVIOUS";
-        break;
+    switch (value) {
+    case static_cast<int>(ChannelControl::KEEP_OPEN):
+        return ChannelControl::KEEP_OPEN;
+    case static_cast<int>(ChannelControl::CLOSE_AFTER):
+        return ChannelControl::CLOSE_AFTER;
     default:
-        os << "UNKNOWN";
-        break;
+        throw std::invalid_argument("invalid ChannelControl value");
     }
-
-    return os;
 }
 
-} /* namespace selection */
 } /* namespace reader */
 } /* namespace keypop */

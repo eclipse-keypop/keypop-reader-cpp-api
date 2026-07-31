@@ -13,10 +13,14 @@
 
 #pragma once
 
+#include "keypop/reader/ChannelControl.hpp"
+
 namespace keypop {
 namespace reader {
-namespace selection {
+namespace transaction {
 namespace spi {
+
+using keypop::reader::ChannelControl;
 
 /**
  * Contains operations common to all card transactions.
@@ -36,7 +40,7 @@ namespace spi {
  * @since 2.1.0
  */
 template <typename T>
-class CardTransactionManager<CardTransactionManager<T>> {
+class CardTransactionManager {
 public:
     /**
      * Processes all previously prepared commands and closes the physical
@@ -62,10 +66,40 @@ public:
      * status.
      * @since 2.1.0
      */
-    T& processCommands(ChannelControl channelControl);
+    virtual T& processCommands(ChannelControl channelControl) = 0;
+};
+
+template <typename U>
+class CardTransactionManager<CardTransactionManager<U>> {
+public:
+    /**
+     * Processes all previously prepared commands and closes the physical
+     * channel if requested.
+     *
+     * <p>All APDUs corresponding to the prepared commands are sent to the card,
+     * their responses are retrieved and used to update the SmartCard associated
+     * with the transaction.
+     *
+     * <p>For write commands, the SmartCard is updated only when the command is
+     * successful.
+     *
+     * <p>The process is interrupted at the first failed command.
+     *
+     * @param channelControl Policy for managing the physical channel after
+     * executing commands to the card.
+     * @return The current instance.
+     * @throw ReaderCommunicationException If a communication error with the
+     * card reader occurs.
+     * @throw CardCommunicationException If a communication error with the card
+     * occurs.
+     * @throw InvalidCardResponseException If a command returns an unexpected
+     * status.
+     * @since 2.1.0
+     */
+    virtual U& processCommands(ChannelControl channelControl) = 0;
 };
 
 } /* namespace spi */
-} /* namespace selection */
+} /* namespace transaction */
 } /* namespace reader */
 } /* namespace keypop */

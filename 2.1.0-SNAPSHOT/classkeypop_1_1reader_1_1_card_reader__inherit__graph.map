@@ -1,0 +1,5 @@
+<map id="keypop::reader::CardReader" name="keypop::reader::CardReader">
+<area shape="rect" id="node1" title="Card reader driving the underlying hardware to manage the card detection." alt="" coords="109,5,287,32"/>
+<area shape="rect" id="node2" href="$classkeypop_1_1reader_1_1_configurable_card_reader.html" title="Configurable card reader providing the methods to manage the card protocols." alt="" coords="5,80,188,121"/>
+<area shape="rect" id="node3" href="$classkeypop_1_1reader_1_1_observable_card_reader.html" title="Card reader able to observe the insertion/removal of cards." alt="" coords="212,80,389,121"/>
+</map>

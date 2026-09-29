@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classkeypop_1_1reader_1_1_card_reader.html" title="Card reader driving the underlying hardware to manage the card detection." alt="" coords="5,46,184,73"/>
+<area shape="rect" id="node2" href="$classkeypop_1_1reader_1_1_configurable_card_reader.html" title="Configurable card reader providing the methods to manage the card protocols." alt="" coords="232,5,415,47"/>
+<area shape="rect" id="node3" href="$classkeypop_1_1reader_1_1_observable_card_reader.html" title="Card reader able to observe the insertion/removal of cards." alt="" coords="235,71,412,112"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="keypop::reader::ReaderProtocolNotSupportedException" name="keypop::reader::ReaderProtocolNotSupportedException">
+<area shape="rect" id="node1" title="Indicates that the current card protocol is not supported by the reader." alt="" coords="5,155,205,196"/>
+<area shape="rect" id="node2" title=" " alt="" coords="44,80,167,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="55,5,156,32"/>
+</map>

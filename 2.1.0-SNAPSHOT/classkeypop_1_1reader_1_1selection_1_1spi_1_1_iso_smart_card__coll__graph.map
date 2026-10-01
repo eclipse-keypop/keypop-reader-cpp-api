@@ -1,0 +1,4 @@
+<map id="keypop::reader::selection::spi::IsoSmartCard" name="keypop::reader::selection::spi::IsoSmartCard">
+<area shape="rect" id="node1" title="ISO 7816&#45;4 smart card with which communication has been established after a selection process and whi..." alt="" coords="5,95,168,136"/>
+<area shape="rect" id="node2" href="$classkeypop_1_1reader_1_1selection_1_1spi_1_1_smart_card.html" title="Basic smart card with which communication has been established after a selection process and which is..." alt="" coords="5,5,168,47"/>
+</map>

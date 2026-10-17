@@ -27,7 +27,7 @@ namespace reader {
  *
  * @since 1.0.0
  */
-class ReaderCommunicationException final : public std::runtime_error {
+class ReaderCommunicationException : public std::runtime_error {
 public:
     /**
      * @param message The message to identify the exception context.

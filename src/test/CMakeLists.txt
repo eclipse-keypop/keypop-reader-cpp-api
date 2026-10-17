@@ -23,9 +23,8 @@ ADD_EXECUTABLE(
     ${CMAKE_CURRENT_SOURCE_DIR}/ReaderApiPropertiesTest.cpp
 )
 
-# Add Google Test
-SET(GOOGLETEST_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-INCLUDE(CMakeLists.txt.googletest)
+# GTest/GMock are supplied by Conan (test_requires) via CMakeDeps
+FIND_PACKAGE(GTest REQUIRED CONFIG)
 
 TARGET_LINK_LIBRARIES(
 
@@ -33,6 +32,6 @@ TARGET_LINK_LIBRARIES(
 
     PRIVATE
 
-    gtest
-    gmock
+    GTest::gtest
+    GTest::gmock
     Keypop::Reader)

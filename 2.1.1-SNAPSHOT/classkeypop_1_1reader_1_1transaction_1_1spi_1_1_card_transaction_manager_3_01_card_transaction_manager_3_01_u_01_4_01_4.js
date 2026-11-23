@@ -1,0 +1,4 @@
+var classkeypop_1_1reader_1_1transaction_1_1spi_1_1_card_transaction_manager_3_01_card_transaction_manager_3_01_u_01_4_01_4 =
+[
+    [ "processCommands", "classkeypop_1_1reader_1_1transaction_1_1spi_1_1_card_transaction_manager_3_01_card_transaction_manager_3_01_u_01_4_01_4.html#ac9b2f8d0b325417d60852875a992d567", null ]
+];

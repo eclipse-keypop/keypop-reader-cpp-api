@@ -1,0 +1,5 @@
+<map id="keypop::reader::selection::InvalidCardResponseException" name="keypop::reader::selection::InvalidCardResponseException">
+<area shape="rect" id="node1" title="Indicates that a response received from the card during the selection process was invalid." alt="" coords="5,155,212,196"/>
+<area shape="rect" id="node2" title=" " alt="" coords="47,80,170,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="58,5,159,32"/>
+</map>

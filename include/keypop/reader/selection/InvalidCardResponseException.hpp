@@ -26,7 +26,7 @@ namespace selection {
  *
  * @since 1.0.0
  */
-class InvalidCardResponseException final : public std::runtime_error {
+class InvalidCardResponseException : public std::runtime_error {
 public:
     /**
      * @param message The message to identify the exception context.
